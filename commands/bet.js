@@ -9,6 +9,8 @@ module.exports.run = async (bot, message, args) => {
 
     if(!args[0]) return message.reply("please specify a bet");
 
+    if(isNaN(args[0])) return message.reply("Enter money please");
+
     try{
         var user_bet = parseFloat(args[0]);
         var user_prediction = args[1];
