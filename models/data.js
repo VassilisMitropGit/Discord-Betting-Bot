@@ -4,7 +4,9 @@ const dataSchema = mongoose.Schema({
     userID: String,
     lb: String,
     money: Number,
-    daily: Number
+    daily: Number,
+    currentbet: Number,
+    prediction: String
 })
 
 module.exports = mongoose.model("Data", dataSchema);

@@ -34,7 +34,7 @@ module.exports.run = async (bot, message, args) => {
             if(timeout - (Date.now() - data.daily) > 0){
                 let time = ms(timeout - (Date.now() - data.daily));
 
-                return message.reply(`You already collected your reward playa! Collect again in ${time.hours}h ${time.minutes}m ${time.seconds}s`);
+                return message.reply(`You already collected your reward! ~skrrt~ Collect again in ${time.hours}h ${time.minutes}m ${time.seconds}s`);
             } else{
                 data.money += reward;
                 data.daily = Date.now();
