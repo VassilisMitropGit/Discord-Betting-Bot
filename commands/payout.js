@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
     for(var i in money){
         for(var j in winners){
             if(money[i].id === winners[j].id){
-                money[i].money += winners[j].bet * (total_players / winning_players);
+                money[i].money += winners[j].bet * Math.floor(total_players / winning_players);
                 fs.writeFile("./money.json", JSON.stringify(money), (err) => {
                     if(err) console.log(err);
                 });

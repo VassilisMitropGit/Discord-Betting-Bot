@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
         return message.reply("you can only enter whole numbers. Or you didn't even enter a number...");
     }
 
-    //if(user_bet != Math.floor(user_bet)) return message.reply("you can only enter whole numbers. Or you didn't even enter a number...");
+    if(user_bet != Math.floor(user_bet)) return message.reply("you can only enter whole numbers. Or you didn't even enter a number...");
 
     if(money[message.author.id].money < user_bet) return message.reply("you don't have that much money.");
 
