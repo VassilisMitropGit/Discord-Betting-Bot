@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const botconfig = require("../botconfig.json");
 
 //Connect to the database
-mongoose.connect(botconfig.mongoPass, {
+mongoose.connect(process.env.mongoPass, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -34,11 +34,8 @@ module.exports.run = async (bot, message, args) => {
 
         for (var w in data){
             income = data[w].currentbet * multiplier;
-            console.log(income);
             let income_fixed = income.toFixed(2);
-            console.log(income_fixed);
             let income_fixed_num = parseFloat(income_fixed);
-            console.log(income_fixed_num);
             data[w].money += income_fixed_num;
             data[w].currentbet = 0;
             data[w].prediction = "";
