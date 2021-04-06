@@ -21,8 +21,9 @@ module.exports.run = async (bot, message, args) => {
     }
 
     if(!args[0]) return message.reply("Please specify a bet");
+    if(!args[1]) return message.reply("Please enter a prediction");
     if(isNaN(args[0])) return message.reply("Enter a valid amount of money please");
-    if(user_bet != Math.floor(user_bet)) return message.reply("you can only enter whole numbers.");
+    //if(user_bet != Math.floor(user_bet)) return message.reply("you can only enter whole numbers.");
     if(user_bet <= 0) return message.reply("Don't try to scam the KoutoukiBooker");
 
 
