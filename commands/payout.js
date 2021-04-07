@@ -30,7 +30,6 @@ module.exports.run = async (bot, message, args) => {
         if (!data.length) return message.reply("Literally noone won...");
 
         var multiplier = total_players/winning_players;
-        console.log(multiplier);
 
         for (var w in data){
             income = data[w].currentbet * multiplier;

@@ -49,6 +49,7 @@ module.exports.run = async (bot, message, args) => {
         } else{
             data.money -= user_bet;
             data.currentbet += user_bet;
+            data.prediction = user_prediction;
             data.save().catch(err => console.log(err));
             return message.reply(`You just upped your prediction by $${user_bet}, for a total of ${data.currentbet}!. All in or no balls.`);
         }
